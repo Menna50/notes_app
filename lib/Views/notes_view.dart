@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/Widgets/custom_app_bar.dart';
+import 'package:notes_app/constants.dart';
 
 import '../Widgets/add_note_bottom_sheet.dart';
 import '../Widgets/notes_view_body.dart';
@@ -23,7 +24,7 @@ body: Scaffold(
       );
 
     },
-    child: Icon(Icons.add,color: Colors.black,),shape: CircleBorder(),backgroundColor: Colors.greenAccent,),
+    child: Icon(Icons.add,color: Colors.black,),shape: CircleBorder(),backgroundColor: KPrimaryColor,),
    body:  NotesViewBody()
 ) ,
     );
