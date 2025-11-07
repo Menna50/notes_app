@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:notes_app/Views/edit_note_view.dart';
 
 class NoteItem extends StatelessWidget {
   NoteItem();
@@ -13,26 +14,31 @@ class NoteItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(16)
             
       ),
-      child: Column(
+      child: GestureDetector(
+        onTap: (){
+Navigator.pushNamed(context, EditNoteView.id);
+        },
+        child: Column(
 
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          ListTile(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            ListTile(
 
 
-            title: Text('Flutter tips',style: TextStyle(color: Colors.black,fontSize: 24),),
-            subtitle: Padding(
-              padding: const EdgeInsets.only(top: 16),
-              child: Text('Build your career with Tharwat Samy',style: TextStyle(color: Colors.black.withValues(alpha: .5),fontSize: 16)),
+              title: Text('Flutter tips',style: TextStyle(color: Colors.black,fontSize: 24),),
+              subtitle: Padding(
+                padding: const EdgeInsets.only(top: 16),
+                child: Text('Build your career with Tharwat Samy',style: TextStyle(color: Colors.black.withValues(alpha: .5),fontSize: 16)),
+              ),
+              trailing: IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.trash,color: Colors.black,size: 24,)),
             ),
-            trailing: IconButton(onPressed: (){}, icon: Icon(FontAwesomeIcons.trash,color: Colors.black,size: 24,)),
-          ),
-SizedBox(height: 30,),
-          Padding(
-            padding: const EdgeInsets.only(right: 32),
-            child: Text('May 21,2022',style: TextStyle(color: Colors.black.withValues(alpha: .5))),
-          )
-        ],
+        SizedBox(height: 30,),
+            Padding(
+              padding: const EdgeInsets.only(right: 32),
+              child: Text('May 21,2022',style: TextStyle(color: Colors.black.withValues(alpha: .5))),
+            )
+          ],
+        ),
       ),
     );
   }
