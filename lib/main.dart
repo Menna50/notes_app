@@ -4,6 +4,7 @@ import 'package:notes_app/Views/edit_note_view.dart';
 import 'package:notes_app/Views/notes_view.dart';
 
 void main() {
+
   runApp(const NotesApp());
 }
 
